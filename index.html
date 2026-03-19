@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quest: The Wizard's Journey</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .story-section {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .code-concept {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .concept-title {
+            color: #81e6d9;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .interactive-section {
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .choice-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .choice-button:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+        
+        .input-field {
+            padding: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #48bb78, #38a169);
+            transition: width 0.5s ease;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .success {
+            background: #c6f6d5;
+            border: 2px solid #68d391;
+            color: #22543d;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🧙‍♂️ Code Quest</h1>
+        <p class="subtitle">Learn coding magic through adventure!</p>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="level">1</div>
+                <div>Level</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="mana">50</div>
+                <div>Mana</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="spells">0</div>
+                <div>Spells Learned</div>
+            </div>
+        </div>
+        
+        <!-- Chapter 1: Variables -->
+        <div id="chapter1" class="chapter">
+            <div class="story-section">
+                <h2>Chapter 1: The Mysterious Potion 🧪</h2>
+                <p>Welcome, young apprentice! You've just arrived at the Academy of Code Magic. Your first lesson begins in the ancient Potion Room, where ingredients float mysteriously in labeled jars.</p>
+                
+                <p>The wise Master Debugger approaches you with a knowing smile. "To become a true Code Wizard," she says, "you must first learn to <strong>store magical ingredients in containers</strong>. We call these containers... <em>variables</em>."</p>
+            </div>
+            
+            <div class="code-concept">
+                <div class="concept-title">🎯 Coding Concept: Variables</div>
+                <p>A variable is like a magical container that holds information. Just like a jar holds potion ingredients!</p>
+                <p><strong>Example:</strong> playerName = "Alex the Brave"</p>
+                <p>This creates a container called "playerName" and puts "Alex the Brave" inside it.</p>
+            </div>
+            
+            <div class="interactive-section">
+                <h3>Your First Spell! ✨</h3>
+                <p>Master Debugger hands you a glowing crystal. "Store your wizard name in this magical variable," she instructs.</p>
+                
+                <p>What would you like your wizard name to be?</p>
+                <input type="text" id="wizardName" class="input-field" placeholder="Enter your wizard name">
+                <button class="choice-button" onclick="setWizardName()">Store Name in Variable</button>
+                
+                <div id="nameResult" class="hidden"></div>
+            </div>
+        </div>
+        
+        <!-- Chapter 2: Conditionals -->
+        <div id="chapter2" class="chapter hidden">
+            <div class="story-section">
+                <h2>Chapter 2: The Enchanted Door 🚪</h2>
+                <p>Excellent work, <span id="displayName">young wizard</span>! Your variable magic impressed Master Debugger.</p>
+                
+                <p>Now you face a mysterious door with ancient runes. A voice echoes: "Only those who understand the magic of <strong>decisions</strong> may pass. Answer correctly, and the door opens. Answer wrong, and you must try again."</p>
+                
+                <p>The door shimmers as runes appear: "When it rains, take an umbrella. When it's sunny, wear sunglasses. This is the magic of... <em>conditional statements</em>!"</p>
+            </div>
+            
+            <div class="code-concept">
+                <div class="concept-title">🎯 Coding Concept: If/Then Statements</div>
+                <p>Conditional statements help your program make decisions, just like you do every day!</p>
+                <p><strong>Example:</strong></p>
+                <p>if (weather == "rainy") {<br>
+                &nbsp;&nbsp;action = "take umbrella"<br>
+                } else {<br>
+                &nbsp;&nbsp;action = "wear sunglasses"<br>
+                }</p>
+            </div>
+            
+            <div class="interactive-section">
+                <h3>The Door's Challenge 🗝️</h3>
+                <p>The door speaks: "A dragon blocks your path. What do you do?"</p>
+                
+                <div id="dragonChoice">
+                    <button class="choice-button" onclick="handleDragon('fight')">Fight the Dragon</button>
+                    <button class="choice-button" onclick="handleDragon('talk')">Try to Talk to It</button>
+                    <button class="choice-button" onclick="handleDragon('sneak')">Sneak Around It</button>
+                </div>
+                
+                <div id="dragonResult" class="hidden"></div>
+            </div>
+        </div>
+        
+        <!-- Chapter 3: Loops -->
+        <div id="chapter3" class="chapter hidden">
+            <div class="story-section">
+                <h2>Chapter 3: The Repeating Spell 🔄</h2>
+                <p>The door creaks open, revealing a room filled with floating magical orbs. <span id="displayName2">Wizard</span>, you've learned variables and decisions - now for the final lesson!</p>
+                
+                <p>Master Debugger appears beside you. "See those 10 dark orbs? They need to be lit with magic. You could cast 10 separate spells... or learn the ancient art of <strong>repetition magic</strong> - what we call <em>loops</em>!"</p>
+            </div>
+            
+            <div class="code-concept">
+                <div class="concept-title">🎯 Coding Concept: Loops</div>
+                <p>Loops let you repeat actions without writing the same code over and over!</p>
+                <p><strong>Example:</strong></p>
+                <p>for (i = 1; i <= 10; i++) {<br>
+                &nbsp;&nbsp;lightOrb(i)<br>
+                }</p>
+                <p>This lights 10 orbs with just 3 lines instead of 10!</p>
+            </div>
+            
+            <div class="interactive-section">
+                <h3>Light the Orbs! 💡</h3>
+                <p>How many orbs should we light with your loop spell?</p>
+                
+                <input type="number" id="orbCount" class="input-field" min="1" max="10" value="5" placeholder="Number of orbs">
+                <button class="choice-button" onclick="lightOrbs()">Cast Loop Spell</button>
+                
+                <div id="orbDisplay"></div>
+                <div id="loopResult" class="hidden"></div>
+            </div>
+        </div>
+        
+        <!-- Final Chapter -->
+        <div id="finalChapter" class="chapter hidden">
+            <div class="story-section success">
+                <h2>🎉 Congratulations, Master <span id="finalName">Wizard</span>!</h2>
+                <p>You've successfully learned the three fundamental magics of coding:</p>
+                <ul>
+                    <li><strong>Variables</strong> - Storing information in magical containers</li>
+                    <li><strong>Conditionals</strong> - Making smart decisions with if/then logic</li>
+                    <li><strong>Loops</strong> - Repeating actions efficiently</li>
+                </ul>
+                
+                <p>These three concepts are the foundation of all programming! You're now ready to begin your journey as a true Code Wizard. 🧙‍♂️✨</p>
+                
+                <button class="choice-button" onclick="restartGame()">Start New Adventure</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let gameState = {
+            wizardName: '',
+            level: 1,
+            mana: 50,
+            spellsLearned: 0,
+            progress: 0
+        };
+        
+        function updateStats() {
+            document.getElementById('level').textContent = gameState.level;
+            document.getElementById('mana').textContent = gameState.mana;
+            document.getElementById('spells').textContent = gameState.spellsLearned;
+            document.getElementById('progressBar').style.width = gameState.progress + '%';
+        }
+        
+        function setWizardName() {
+            const name = document.getElementById('wizardName').value.trim();
+            if (name) {
+                gameState.wizardName = name;
+                gameState.spellsLearned++;
+                gameState.progress = 25;
+                updateStats();
+                
+                const result = document.getElementById('nameResult');
+                result.innerHTML = `
+                    <div class="success">
+                        <h4>✨ Variable Magic Successful!</h4>
+                        <p><strong>wizardName = "${name}"</strong></p>
+                        <p>Perfect! You've stored "${name}" in the variable called "wizardName". This is exactly how variables work in programming - they hold information you can use later!</p>
+                        <button class="choice-button" onclick="nextChapter(2)">Continue Your Journey</button>
+                    </div>
+                `;
+                result.classList.remove('hidden');
+            } else {
+                alert('Please enter a wizard name first!');
+            }
+        }
+        
+        function handleDragon(choice) {
+            gameState.spellsLearned++;
+            gameState.progress = 50;
+            gameState.level = 2;
+            updateStats();
+            
+            const result = document.getElementById('dragonResult');
+            let response = '';
+            
+            if (choice === 'talk') {
+                response = `
+                    <div class="success">
+                        <h4>🐲 Wise Choice!</h4>
+                        <p><strong>if (choice == "talk") { result = "success" }</strong></p>
+                        <p>The dragon was actually friendly and just wanted someone to chat with! By choosing to talk, you used conditional logic perfectly. Your "if" statement led to the best outcome!</p>
+                        <button class="choice-button" onclick="nextChapter(3)">Enter the Final Chamber</button>
+                    </div>
+                `;
+                gameState.mana += 20;
+            } else if (choice === 'sneak') {
+                response = `
+                    <div class="success">
+                        <h4>🤫 Clever Thinking!</h4>
+                        <p><strong>if (choice == "sneak") { result = "success" }</strong></p>
+                        <p>You snuck past quietly! Your conditional logic worked - sometimes the indirect approach is best. The dragon never even noticed you!</p>
+                        <button class="choice-button" onclick="nextChapter(3)">Enter the Final Chamber</button>
+                    </div>
+                `;
+                gameState.mana += 10;
+            } else {
+                response = `
+                    <div class="success">
+                        <h4>⚔️ Brave Warrior!</h4>
+                        <p><strong>if (choice == "fight") { result = "victory" }</strong></p>
+                        <p>You defeated the dragon with courage! Even though this was the harder path, your conditional statement executed perfectly. Well done!</p>
+                        <button class="choice-button" onclick="nextChapter(3)">Enter the Final Chamber</button>
+                    </div>
+                `;
+            }
+            
+            result.innerHTML = response;
+            result.classList.remove('hidden');
+            document.getElementById('dragonChoice').style.display = 'none';
+            updateStats();
+        }
+        
+        function lightOrbs() {
+            const orbCount = parseInt(document.getElementById('orbCount').value) || 5;
+            gameState.spellsLearned++;
+            gameState.progress = 75;
+            gameState.level = 3;
+            updateStats();
+            
+            const display = document.getElementById('orbDisplay');
+            let orbs = '';
+            
+            // Simulate the loop visually
+            for (let i = 1; i <= orbCount; i++) {
+                orbs += `<span style="font-size: 2em; margin: 5px;">💡</span>`;
+            }
+            
+            display.innerHTML = `
+                <div style="text-align: center; padding: 20px; background: #fffbeb; border-radius: 10px; margin: 15px 0;">
+                    <h4>Your Loop Spell in Action:</h4>
+                    ${orbs}
+                </div>
+            `;
+            
+            const result = document.getElementById('loopResult');
+            result.innerHTML = `
+                <div class="success">
+                    <h4>🔄 Loop Magic Mastered!</h4>
+                    <p><strong>for (i = 1; i <= ${orbCount}; i++) { lightOrb(i) }</strong></p>
+                    <p>Incredible! Instead of writing ${orbCount} separate spells, your loop did all the work automatically. This is the power of loops - they make your code efficient and elegant!</p>
+                    <button class="choice-button" onclick="nextChapter(4)">Complete Your Training</button>
+                </div>
+            `;
+            result.classList.remove('hidden');
+        }
+        
+        function nextChapter(chapterNum) {
+            document.querySelectorAll('.chapter').forEach(chapter => {
+                chapter.classList.add('hidden');
+            });
+            
+            if (chapterNum === 2) {
+                document.getElementById('chapter2').classList.remove('hidden');
+                document.getElementById('displayName').textContent = gameState.wizardName;
+            } else if (chapterNum === 3) {
+                document.getElementById('chapter3').classList.remove('hidden');
+                document.getElementById('displayName2').textContent = gameState.wizardName;
+            } else if (chapterNum === 4) {
+                gameState.progress = 100;
+                updateStats();
+                document.getElementById('finalChapter').classList.remove('hidden');
+                document.getElementById('finalName').textContent = gameState.wizardName;
+            }
+        }
+        
+        function restartGame() {
+            gameState = {
+                wizardName: '',
+                level: 1,
+                mana: 50,
+                spellsLearned: 0,
+                progress: 0
+            };
+            
+            updateStats();
+            document.querySelectorAll('.chapter').forEach(chapter => {
+                chapter.classList.add('hidden');
+            });
+            document.getElementById('chapter1').classList.remove('hidden');
+            document.getElementById('wizardName').value = '';
+            document.getElementById('nameResult').classList.add('hidden');
+            document.getElementById('dragonChoice').style.display = 'block';
+            document.getElementById('dragonResult').classList.add('hidden');
+            document.getElementById('orbDisplay').innerHTML = '';
+            document.getElementById('loopResult').classList.add('hidden');
+        }
+        
+        // Initialize the game
+        updateStats();
+    </script>
+</body>
+</html>
