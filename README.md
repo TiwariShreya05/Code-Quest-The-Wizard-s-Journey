@@ -1,4 +1,5 @@
 🧙‍♀️💻 Code Quest: The Wizard’s Journey
+
 📌 Overview
 
 I’m excited to share one of my projects — Code Quest: The Wizard’s Journey, an interactive, story-based web game designed to help beginners understand core programming concepts through gameplay.
@@ -52,12 +53,19 @@ Enhancing user experience through interactive design
 Building complete end-to-end frontend projects
 
 📂 Project Structure
+
 Code-Quest/
+
 │── index.html
+
 │── style.css
+
 │── script.js
+
 │── assets/
+
 │── README.md
+
 ⚙️ Installation & Setup
 
 Clone the repository
@@ -72,7 +80,7 @@ Open index.html in your browser
 
 📸 Demo / Screenshots
 
-(Add screenshots or a demo GIF here to showcase gameplay)
+
 
 🤝 Let’s Connect
 
