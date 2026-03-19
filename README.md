@@ -70,7 +70,7 @@ Code-Quest/
 
 Clone the repository
 
-git clone https://github.com/your-username/code-quest.git
+git clone https://github.com/TiwariShreya05/Code-Quest-The-Wizard-s-Journey
 
 Navigate into the project folder
 
