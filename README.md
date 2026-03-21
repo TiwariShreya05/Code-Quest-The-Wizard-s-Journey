@@ -84,7 +84,15 @@ Open index.html in your browser
 
 🤝 Let’s Connect
 
-I’m actively looking for internship opportunities where I can apply my skills, work on real-world projects, and grow as a developer.
+📬 Contact
+
+For queries, feedback, or collaboration opportunities:
+
+LinkedIn: https://www.linkedin.com/in/shreya-tiwari-520b692b3/
+
+Email: shreyatiwari0801@gmail.com
+
+GitHub: https://github.com/TiwariShreya05
 
 📩 I’d love to connect with recruiters, mentors, and fellow developers.
 Feedback, suggestions, and opportunities are always welcome!
