@@ -6,9 +6,7 @@ I’m excited to share one of my projects — Code Quest: The Wizard’s Journey
 
 As a student exploring frontend development and JavaScript logic, I wanted to build something that goes beyond static pages and actually engages users while teaching them how code works.
 
-🔗 Live Website: https://code-quest-the-wizard-s-journey.netlify.app/
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ca1a3bee-b6c4-4fb8-baa3-9090b7592193/deploy-status)](https://app.netlify.com/projects/code-quest-the-wizard-s-journey/deploys)
-
+🔗 Live Website:https://tiwarishreya05.github.io/Code-Quest-The-Wizard-s-Journey/
 
 🧠 What the Project Does
 
