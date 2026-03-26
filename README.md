@@ -95,10 +95,3 @@ LinkedIn: https://www.linkedin.com/in/shreya-tiwari-520b692b3/
 Email: shreyatiwari0801@gmail.com
 
 GitHub: https://github.com/TiwariShreya05
-
-📩 I’d love to connect with recruiters, mentors, and fellow developers.
-Feedback, suggestions, and opportunities are always welcome!
-
-⭐ If you like this project
-
-Give it a ⭐ on GitHub and share your feedback!
