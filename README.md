@@ -1,97 +1,75 @@
-🧙‍♀️💻 Code Quest: The Wizard’s Journey
+# 🧙‍♀️💻 Code Quest: The Wizard's Journey
 
-📌 Overview
+An interactive, story-based web game that teaches core programming concepts through gameplay — no theory, just hands-on learning.
 
-I’m excited to share one of my projects — Code Quest: The Wizard’s Journey, an interactive, story-based web game designed to help beginners understand core programming concepts through gameplay.
+🔗 **Live Demo → [tiwarishreya05.github.io/Code-Quest-The-Wizard-s-Journey](https://tiwarishreya05.github.io/Code-Quest-The-Wizard-s-Journey/)**
 
-As a student exploring frontend development and JavaScript logic, I wanted to build something that goes beyond static pages and actually engages users while teaching them how code works.
+---
 
-🔗 Live Website:https://tiwarishreya05.github.io/Code-Quest-The-Wizard-s-Journey/
+## 📌 Project Overview
 
-🧠 What the Project Does
+Code Quest takes users on a wizard's journey where each chapter represents a fundamental programming concept. Instead of reading theory, users interact with the game, make decisions, and see real-time results — reinforcing learning through experience.
 
-Code Quest takes users on a wizard’s journey where each chapter represents a fundamental programming concept. Instead of reading theory, users interact with the application, make decisions, and see real-time results — reinforcing learning through experience.
+---
 
-📚 Concepts Implemented
+## 📚 Concepts Taught
 
-Variables – Storing and displaying user input dynamically
+| Chapter | Concept | How It's Taught |
+|---------|---------|-----------------|
+| 1 | Variables | Storing and displaying user input dynamically |
+| 2 | Conditionals | Decision-based game logic using if/else |
+| 3 | Loops | Repeating actions through iteration |
 
-Conditional Statements (if/else) – Decision-based game logic
+---
 
-Loops – Repeating actions efficiently using iteration
+## 🛠 Technical Highlights
 
-🛠 Technical Highlights
+- Dynamic DOM manipulation using JavaScript
+- User input handling with real-time feedback
+- Chapter-based navigation and state management
+- Clean, responsive UI — no external libraries
 
-Dynamic DOM manipulation using JavaScript
+---
 
-User input handling with real-time feedback
+## ⚙️ Tech Stack
 
-Chapter-based navigation and state management
+- **HTML5** — structure and semantics
+- **CSS3** — styling and responsive layout
+- **JavaScript (ES6)** — game logic and DOM interaction
 
-Clean and responsive UI using CSS
+---
 
-Structured and semantic HTML layout
-
-Logic-driven gameplay without external libraries
-
-⚙️ Tech Stack
-
-HTML5
-
-CSS3
-
-JavaScript (ES6)
-
-🎯 What I Learned
-
-Writing clean and maintainable JavaScript logic
-
-Connecting UI components with underlying game logic
-
-Managing application flow and user progression
-
-Enhancing user experience through interactive design
-
-Building complete end-to-end frontend projects
-
-📂 Project Structure
-
+## 📂 Project Structure
+```
 Code-Quest/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+└── README.md
+```
 
-│── index.html
+---
 
-│── style.css
+## 🚀 Getting Started
 
-│── script.js
-
-│── assets/
-
-│── README.md
-
-⚙️ Installation & Setup
-
-Clone the repository
-
-git clone https://github.com/TiwariShreya05/Code-Quest-The-Wizard-s-Journey
-
-Navigate into the project folder
-
+**1. Clone the repository**
+```bash
+git clone https://github.com/TiwariShreya05/Code-Quest-The-Wizard-s-Journey.git
 cd code-quest
+```
 
-Open index.html in your browser
+**2. Open in browser**
+```bash
+open index.html
+```
 
-📸 Demo / Screenshots
+Or just use the **[live demo](https://tiwarishreya05.github.io/Code-Quest-The-Wizard-s-Journey/)** — no setup needed.
 
+---
 
+## 📬 Contact
 
-🤝 Let’s Connect
-
-📬 Contact
-
-For queries, feedback, or collaboration opportunities:
-
-LinkedIn: https://www.linkedin.com/in/shreya-tiwari-520b692b3/
-
-Email: shreyatiwari0801@gmail.com
-
-GitHub: https://github.com/TiwariShreya05
+- 💼 LinkedIn: [linkedin.com/in/shreya-tiwari-520b692b3](https://www.linkedin.com/in/shreya-tiwari-520b692b3/)
+- 📧 Email: shreyatiwari0801@gmail.com
+- 🐙 GitHub: [github.com/TiwariShreya05](https://github.com/TiwariShreya05)
