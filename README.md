@@ -11,7 +11,7 @@ An interactive, story-based web game that teaches core programming concepts thro
 Code Quest takes users on a wizard's journey where each chapter represents a fundamental programming concept. Instead of reading theory, users interact with the game, make decisions, and see real-time results — reinforcing learning through experience.
 
 ---
-
+ 
 ## 📚 Concepts Taught
 
 | Chapter | Concept | How It's Taught |
